@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Prediction App</title>
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Styling the form */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+    </style>
+
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="avgAreaNumberOfRooms">Average Number of Rooms:</label>
+        <input type="text" name="avgAreaNumberOfRooms" required><br>
+
+        <label for="avgAreaNumberOfBedrooms">Average Number of Bedrooms:</label>
+        <input type="text" name="avgAreaNumberOfBedrooms" required><br>
+
+        <label for="areaPopulation">Area Population:</label>
+        <input type="text" name="areaPopulation" required><br>
+        <button type="submit">Predict Price</button>
+    </form>
+</body>
+</html>
+
+
